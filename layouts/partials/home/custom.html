@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="body">
+    <div class="cols-3">
+      <div class="align-items-center mb-5">
+        {{ $lazy := .Params.enableImageLazyLoading | default .Site.Params.enableImageLazyLoading | default true }}
+        {{ $altText := ($.Site.Language.Params.Author.name | default "Author") }}
+        {{ with .Site.Language.Params.Author.image }}
+          {{ $authorImage := resources.Get . }}
+          {{ if $authorImage }}
+            {{ $imgClass := "mb-4 h-auto rounded-full avatar-homepage" }}
+            {{ partial "picture.html" (dict "img" $authorImage "alt" $altText "class" $imgClass "lazy" $lazy) }}
+          {{ end }}
+        {{ end }}
+        <p class="lg:mr-3">
+          I'm Ha Ho, software developer, and tech entrepreneur. My goal is to build simple and
+          effective solutions that solve real-world problems. I'm currently working on a bootstrap
+          project and blog about my journey.
+        </p>
+
+        {{ with .Site.Language.Params.Author.links }}
+          <ul class="list-unstyled social mb-5">
+            {{ range $links := . }}
+              {{ range $name, $url := $links }}
+                <li>
+                  <a
+                    class="d-inline-flex align-items-center gap"
+                    href="{{ $url | safeURL }}"
+                    target="_blank"
+                    aria-label="{{ $name | title }}"
+                    rel="me noopener noreferrer"
+                    >{{ partial "icon.html" $name }}
+                    {{ if eq $name "github" }}
+                      GitHub
+                    {{ else if eq $name "stack-overflow" }}
+                      StackOverflow
+                    {{ else if eq $name "linkedin" }}
+                      LinkedIn
+                    {{ else }}
+                      {{ $name }}
+                    {{ end }}</a
+                  >
+                </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        {{ end }}
+      </div>
+
+      <div>
+        <div class="mb-3">
+          <img src="https://ghchart.rshah.org/hoducha" alt="Github contributions" />
+        </div>
+        <section>{{ partial "recent-articles.html" . }}</section>
+      </div>
+    </div>
+  </div>
+</div>
