@@ -1,7 +1,15 @@
 User-agent: *
 
-Disallow: /categories/
+Disallow: /posts/a-git-flow-for-agile-development/
 
 Disallow: /
+
+Disallow: /posts/my-publishing-workflow/
+
+Disallow: /posts/
+
+Disallow: /about/
+
+Disallow: /categories/
 
 Disallow: /tags/
