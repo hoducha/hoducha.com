@@ -1,4 +1,0 @@
-baseURL = 'https://hoducha.com/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-enableRobotsTXT = true
