@@ -1,15 +1,3 @@
 User-agent: *
-
-Disallow: /posts/a-git-flow-for-agile-development/
-
-Disallow: /
-
-Disallow: /posts/my-publishing-workflow/
-
-Disallow: /posts/
-
-Disallow: /about/
-
-Disallow: /categories/
-
-Disallow: /tags/
+Allow: /
+Sitemap: https://hoducha.com/sitemap.xml
