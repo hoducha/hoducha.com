@@ -3,8 +3,8 @@ type: blog
 title: A Sample Post
 tags:
 categories:
-date: 2023-04-11
-lastMod: 2023-04-11
+date: 2024-05-01
+lastMod: 2023-05-01
 ---
 
 ## Blockquotes
