@@ -1,6 +1,6 @@
 ---
 type: blog
-title: A Sample Post
+title: Sample Blog Post
 tags:
 categories:
 date: 2024-05-01
